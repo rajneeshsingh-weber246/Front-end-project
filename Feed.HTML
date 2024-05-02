@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/b8a58bc95c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <style>
+            .star-rating i {
+        cursor: pointer;
+        font-size: 24px;
+      }
+      .preview-image, .review-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+    </style>
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                </a>
+                <ul class="nav-menu">
+                  <li> <a href="/hotl.html/index.html" class="nav-list">Hotels</a> </li>
+                  <li> <a href="/hotl.html/Rooms.html" class="nav-list">Destinations</a> </li>
+                  <li> <a href="/hotl.html/offer.html" class="nav-list">Offers</a> </li>
+                  <li> <a href="/hotl.html/meeting.html" class="nav-list">Meeting & Events</a> </li>
+                  <li> <a href="/hotl.html/Feed.HTML" class="nav-list">Feedback</a> </li>
+              </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+  <!-- Feedback and Rating Form -->
+  <div class="container mt-5" style="padding-top: 50px;">
+    <h2 class="text-center mb-4">Feedback and Travel Experience Rating</h2>
+    <form id="feedbackForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="images">Upload Image(s)</label>
+        <input type="file" class="form-control-file" id="images" multiple>
+        <div id="imagePreview" class="mt-3"></div>
+      </div>
+      <div class="form-group">
+        <label for="feedback">Feedback</label>
+        <textarea class="form-control" id="feedback" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="experienceRating">Travel Experience Rating</label>
+        <div class="star-rating" id="experienceRating">
+          <!-- Star rating for travel experience -->
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Customer Reviews Section -->
+  <div class="container mt-5" style="padding-bottom: 50px;">
+    <h2 class="text-center mb-4">Customer Reviews</h2>
+    <div id="reviews" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Customer reviews will be dynamically added here -->
+      </div>
+      <a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <hr class="footer-line">
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5 class="section-title">Our services</h5>
+          <ul>
+            <li><a href="/hotl.html/index.html">Hotels</a></li>
+            <li><a href="/hotl.html/Rooms.html">Rooms</a></li>
+            <li><a href="/hotl.html/offer.html">Offers</a></li>
+            <li><a href="/hotl.html/meeting.html">Meeting & Events</a></li>
+            <li><a href="/hotl.html/Feed.HTML">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+            <h5 class="section-title">About</h5>
+            <ul>
+              <li><a href="/hotl.html/Contact.html">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Corporate Information</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="section-title">Consumer Policy</h5>
+          <ul>
+            <li><a href="#">Cancellation</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="section-title">Address</h5>
+          <p>123 Street Name, City, Country</p>
+          <p>Email: example@example.com</p>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+  <div class="copy container-fluid">
+    <div class="row">
+      <div class="col-md-5">
+        <p class="copyright">
+          &copy; 2024 Your Company. All rights reserved.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <div class="image-section text-right">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Function to create star rating system
+    function createStarRating(targetElement) {
+      for (let i = 1; i <= 5; i++) {
+        const star = `<i class="fas fa-star" data-value="${i}"></i>`;
+        targetElement.append(star);
+      }
+    }
+
+    // Function to reset star ratings
+    function resetStarRatings(targetElement) {
+      targetElement.children().removeClass('fas').addClass('far');
+    }
+
+    // Event listener for star ratings
+    $('.star-rating i').click(function() {
+      const rating = parseInt($(this).data('value'));
+      const stars = $(this).parent().children();
+      for (let i = 0; i < rating; i++) {
+        stars.eq(i).removeClass('far').addClass('fas');
+      }
+      for (let i = rating; i < 5; i++) {
+        stars.eq(i).removeClass('fas').addClass('far');
+      }
+    });
+
+    // Function to handle image preview
+    $('#images').change(function() {
+      $('#imagePreview').empty();
+      const files = this.files;
+      for (let i = 0; i < files.length; i++) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = `<img src="${e.target.result}" class="preview-image mb-2" alt="Image Preview">`;
+          $('#imagePreview').append(img);
+        };
+        reader.readAsDataURL(files[i]);
+      }
+    });
+
+    // Function to add review to carousel
+    function addReview(name, feedback, rating, images) {
+      const active = $('#reviews .carousel-item').length === 0 ? 'active' : '';
+      let imagePreview = '';
+      images.forEach(image => {
+        imagePreview += `<img src="${image}" class="review-image mb-2" alt="Customer Image">`;
+      });
+      const review = `
+        <div class="carousel-item ${active}">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">${name}</h5>
+              <p class="card-text">${feedback}</p>
+              <p class="card-text">Rating: ${rating} stars</p>
+              ${imagePreview}
+            </div>
+          </div>
+        </div>
+      `;
+      $('#reviews .carousel-inner').append(review);
+    }
+
+    // Function to handle form submission
+    $('#feedbackForm').submit(function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Retrieve form data
+      const name = $('#name').val();
+      const email = $('#email').val();
+      const feedback = $('#feedback').val();
+      const rating = $('.star-rating i.fas').length; // Get number of filled stars
+      const images = [];
+      $('#imagePreview img').each(function() {
+        images.push($(this).attr('src'));
+      });
+
+      // Add review to carousel
+      addReview(name, feedback, rating, images);
+
+      // Clear form fields
+      $('#name').val('');
+      $('#email').val('');
+      $('#images').val('');
+      $('#feedback').val('');
+
+      // Reset star ratings
+      resetStarRatings($('#experienceRating'));
+      // Clear image preview
+      $('#imagePreview').empty();
+    });
+
+    // Initialize star rating for travel experience
+    createStarRating($('#experienceRating'));
+  </script>
+</body>
+</html>
